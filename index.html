@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWiki</title>
+
+    <!-- Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Mobile toggle -->
+    <input type="checkbox" id="nav-toggle">
+
+    <aside class="sidebar">
+        <label for="nav-toggle" class="nav-toggle">☰</label>
+
+        <h1 class="logo">MyWiki</h1>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#start">Getting Started</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#config">Configuration</a></li>
+                <li><a href="#api">API</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="#">Home</a> / <span>Introduction</span>
+        </div>
+
+        <article>
+
+            <section id="intro">
+                <h2>Introduction</h2>
+                <p>
+                    This is a dark-only documentation layout.
+                    Space Mono keeps everything honest.
+                </p>
+            </section>
+
+            <section id="start">
+                <h3>Getting Started</h3>
+                <p>
+                    Clone it. Open it. Write.
+                </p>
+            </section>
+
+            <section id="usage">
+                <h3>Usage</h3>
+                <pre><code>
+make docs
+deploy silence
+                </code></pre>
+            </section>
+
+            <section id="config">
+                <h3>Configuration</h3>
+                <p>
+                    Everything lives in CSS variables.
+                </p>
+            </section>
+
+            <section id="api">
+                <h3>API</h3>
+                <p>
+                    Words go here when the system grows.
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+</body>
+</html>
