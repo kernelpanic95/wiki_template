@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Mobile toggle -->
@@ -59,10 +60,14 @@
 
             <section id="usage">
                 <h3>Usage</h3>
-                <pre><code>
+                <pre class="code-block">
+    <button class="copy-btn">Copy</button>
+    <code>
 make docs
 deploy silence
-                </code></pre>
+    </code>
+</pre>
+
             </section>
 
             <section id="config">
@@ -81,6 +86,24 @@ deploy silence
 
         </article>
     </main>
+
+    <script>
+document.querySelectorAll('.copy-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const code = button.nextElementSibling.innerText;
+
+        navigator.clipboard.writeText(code).then(() => {
+            button.textContent = 'Copied';
+            button.classList.add('copied');
+
+            setTimeout(() => {
+                button.textContent = 'Copy';
+                button.classList.remove('copied');
+            }, 1500);
+        });
+    });
+});
+</script>
 
 </body>
 </html>
